@@ -12,17 +12,21 @@ public class ChristmasEve {
 //    timeForMilkAndCookies(new Date(2013, 0, 23)) ➞ false
 //    timeForMilkAndCookies(new Date(3000, 11, 24)) ➞ true
 
+    Date christmasDate = new Date(2014,12,24);
+
     public static void main (String[] args){
 
-        Date christmasDate = new Date(2014,12,24);
+
         Date givenDate = new Date(2014,12,24);
 
-        if(christmasDate.equals(givenDate)){
-            System.out.println("true");
-        }
-        else{
-            System.out.println("false");
-        }
+
+        ChristmasEve ce = new ChristmasEve();
+        System.out.println((ce.timeForMilkAndCookies(givenDate)));
+
+
+
+
+
 
 //        ********************************************
 //        String correctDate = "2014-12-24";
@@ -51,6 +55,19 @@ public class ChristmasEve {
 //            System.out.println("false");
 //        }
     }
+
+    private boolean timeForMilkAndCookies(Date providedDate) {
+        if(christmasDate.equals(providedDate)){
+//            System.out.println("true");
+            return true;
+        }
+        else{
+//            System.out.println("false");
+            return false;
+        }
+    }
+
+
 
 //    public boolean timeForMilkAndCookies(Date providedDate){
 //
